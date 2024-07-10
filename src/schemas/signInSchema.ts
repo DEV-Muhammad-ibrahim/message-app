@@ -2,12 +2,12 @@ import {z} from 'zod'
 
 
 const emailValidation = z
-.string()
+.string().email({message:"Invalid email address"})
 
 
 const passwordValidation = z
 .string()
-const SignInSchema = z.object({
+export const SignInSchema = z.object({
   email:emailValidation,
   password:passwordValidation
 })
