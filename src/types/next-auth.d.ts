@@ -23,5 +23,7 @@ declare module 'next-auth/jwt'{
     username?:string,
     isVerified?:boolean,
     isAcceptingMessages?:boolean
+    secret?:string,
+    salt?:string
   }
 }
